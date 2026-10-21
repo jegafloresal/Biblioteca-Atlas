@@ -16,7 +16,7 @@ app.use('/api', estudianteRouter);
 
 // Ruta de prueba raíz
 app.get('/', (req, res) => {
-  res.send('Bienvenido a Nexo Atlas - FLORES ALVAREZ');
+  res.send('Bienvenido a Biblioteca Atlas - FLORES - VALENZUELA - SILVA');
 });
 
 // Conexión a MongoDB Atlas
