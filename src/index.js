@@ -1,14 +1,11 @@
-const express = require('express');
-const mongoose = require('mongoose');
 require('dotenv').config();
+const express = require('express');
+const conectarDB = require('./config/db');
 
 const app = express();
-const port = process.env.PORT || 3000;
 
-// Importar rutas
-const estudianteRouter = require('./routers/estudianteRoute.js');
+conectarDB();
 
-// Middlewares
 app.use(express.json());
 
 // Montar las rutas principales bajo /api
@@ -16,7 +13,7 @@ app.use('/api', estudianteRouter);
 
 // Ruta de prueba raíz
 app.get('/', (req, res) => {
-  res.send('Bienvenido a Biblioteca Atlas - FLORES - VALENZUELA - SILVA');
+  res.send('Bienvenido a Nexo Atlas - FLORES ALVAREZ');
 });
 
 // Conexión a MongoDB Atlas
